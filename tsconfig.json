@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "Node16",
+    "moduleResolution": "node16",
+  "types": [
+      "node",
+      "@wdio/globals/types",
+      "mocha"
+    ],
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "resolveJsonModule": true
+  },
+  "include": [
+    "test/**/*.ts",
+    "test/configs/**/*.ts",
+    "test/types/**/*.ts"
+  ]
+}
