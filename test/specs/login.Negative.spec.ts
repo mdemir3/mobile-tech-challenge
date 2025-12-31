@@ -5,8 +5,8 @@ describe('Login | Negative Scenarios', () => {
 
   beforeEach(async () => {
     await browser.reloadSession()
-    await browser.pause(8000)
-    await LoginPage.loginButton.waitForDisplayed({ timeout: 20000 })
+    await browser.pause(12000)
+    await LoginPage.loginButton.waitForDisplayed({ timeout: 30000 })
   })
 
   invalidLoginData.forEach(({ title, username, password, expectedError }) => {

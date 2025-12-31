@@ -3,6 +3,9 @@ import path from 'path'
 
 export const config: WebdriverIO.Config = {
   ...sharedConfig,
+  specs: [
+    '../specs/**/*.spec.ts'
+  ],
 
   capabilities: [
     {
@@ -16,4 +19,13 @@ export const config: WebdriverIO.Config = {
       'appium:newCommandTimeout': 120,
     }
   ],
+  reporters: [
+    'spec',
+    ['allure', {
+      outputDir: 'allure-results',
+      disableWebdriverStepsReporting: true,
+      disableWebdriverScreenshotsReporting: false,
+    }]
+  ],
+
 }
